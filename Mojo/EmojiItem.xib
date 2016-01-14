@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="EmojiItem" customModule="Mojo" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="48" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WOA-NM-NBM" customClass="EmojiDisplay" customModule="Mojo" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="PcF-e6-Kug"/>
+                    </constraints>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Test" id="wTu-jv-YkJ">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="096-1k-aHC" name="value" keyPath="representedObject.title" id="yak-7Z-hgf"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="WOA-NM-NBM" secondAttribute="trailing" id="VSe-VN-Dwh"/>
+                <constraint firstItem="WOA-NM-NBM" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="ibq-H6-36a"/>
+                <constraint firstItem="WOA-NM-NBM" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="2" id="yzZ-Gr-UL2"/>
+            </constraints>
+            <animations/>
+            <point key="canvasLocation" x="266" y="343"/>
+        </customView>
+        <customObject id="096-1k-aHC" customClass="EmojiItem" customModule="Mojo" customModuleProvider="target">
+            <connections>
+                <outlet property="label" destination="WOA-NM-NBM" id="hSP-QV-TqS"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="7cI-ce-TNC"/>
+            </connections>
+        </customObject>
+    </objects>
+</document>
